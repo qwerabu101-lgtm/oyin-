@@ -1,0 +1,33 @@
+:root{--asfalt:#23262b;--shom:#f2b632;--chang:#eeeadf}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,sans-serif;color:var(--chang);overflow:hidden;background:#9ec9e8}
+#gl{position:fixed;inset:0;width:100%;height:100%;display:block}
+.ui{position:fixed;z-index:2}
+[hidden]{display:none!important}
+#garage{top:0;left:0;bottom:0;width:min(380px,100%);padding:18px;background:rgba(25,27,31,.82);display:flex;flex-direction:column;gap:12px;overflow:auto}
+h1{margin:0}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.row>span{width:64px}
+.row div{display:flex;gap:6px;flex-wrap:wrap}
+button,input{font:inherit;border-radius:8px;border:2px solid #555;background:#3a3d42;color:inherit;padding:8px 12px}
+button.on{border-color:var(--shom);background:#4a4630}
+.sw{width:34px;height:34px;padding:0;border-radius:50%}
+#start,#pay{background:var(--shom);color:#222;border:0;font-weight:700;padding:14px}
+.hint{font-size:.8rem;opacity:.75;margin:0}
+#hud{inset:0;pointer-events:none}
+#hud button,#hud #dialog{pointer-events:auto}
+#stats{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,.55);padding:10px 14px;border-radius:10px;font-size:.9rem}
+#stats b{font-size:2.4rem}
+#limit{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:62px;height:62px;border-radius:50%;background:#fff;color:#111;border:7px solid #d62828;display:grid;place-items:center;font:800 1.4rem system-ui}
+#radar{position:absolute;top:84px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.55);padding:4px 10px;border-radius:8px;font-size:.85rem}
+#radar:empty{display:none}
+#mini{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.5);border-radius:50%}
+#back{position:absolute;top:12px;left:12px}
+#toast{position:absolute;top:30%;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.75);padding:12px 20px;border-radius:12px;font-weight:700;text-align:center;max-width:90%}
+#flash{position:absolute;inset:0;background:#fff;opacity:.8}
+#dialog{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;color:#111;padding:20px;border-radius:14px;width:min(360px,90%);text-align:center}
+#dialog h2{margin:0 0 8px}
+#touch{position:absolute;bottom:12px;right:12px;display:flex;gap:8px}
+#touch button{width:64px;height:64px;opacity:.75;touch-action:none;pointer-events:auto}
+@media (hover:hover) and (pointer:fine){#touch{display:none}}
+input[type=color]{width:40px;height:34px;padding:0}
